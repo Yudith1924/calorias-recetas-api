@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrientes</title>
+
+    <style>
+        /* ===============================
+           RESET
+        =============================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===============================
+           BODY
+        =============================== */
+        body {
+            font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+            background: linear-gradient(180deg, #eef5ef 0%, #f7f4ec 100%);
+            color: #1f2933;
+            padding: 24px;
+        }
+
+        /* ===============================
+           HEADER
+        =============================== */
+        header {
+            margin-bottom: 32px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2f5d50;
+        }
+
+        header p {
+            max-width: 720px;
+            color: #5f6f68;
+            line-height: 1.6;
+        }
+
+        /* ===============================
+           LAYOUT
+        =============================== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        /* ===============================
+           COLUMN
+        =============================== */
+        .column {
+            background: linear-gradient(180deg, #ffffff 0%, #f1f7f3 100%);
+            border-radius: 28px;
+            padding: 26px;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .column h2 {
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+            font-weight: 600;
+            color: #2f5d50;
+        }
+
+        /* ===============================
+           FRUITS LIST
+        =============================== */
+        .fruit-item {
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: linear-gradient(
+                135deg,
+                #e6f2eb 0%,
+                #f6fbf8 100%
+            );
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .fruit-item strong {
+            font-size: 1rem;
+            color: #2f5d50;
+        }
+
+        .fruit-cal {
+            background: #5fa68a;
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ===============================
+           RECIPES GRID
+        =============================== */
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 22px;
+        }
+
+        .recipe-card {
+            background: linear-gradient(
+                180deg,
+                #f6fbf8 0%,
+                #eef5ef 100%
+            );
+            border-radius: 22px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            border-radius: 18px;
+            margin-bottom: 12px;
+            object-fit: cover;
+        }
+
+        .recipe-card h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: #2f5d50;
+        }
+
+        .recipe-card p {
+            font-size: 0.85rem;
+            color: #6b7f76;
+        }
+
+        /* ===============================
+           EMPTY
+        =============================== */
+        .empty {
+            color: #8a9c94;
+            font-style: italic;
+        }
+
+        /* ===============================
+           RESPONSIVE
+        =============================== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Información Nutricional</h1>
+    <p>
+        Consulta el valor calórico de frutas y explora recetas saludables
+        presentadas en un diseño visual inspirado en aplicaciones modernas
+        de alimentación y bienestar.
+    </p>
+</header>
+
+<div class="layout">
+
+    <!-- IZQUIERDA: FRUTAS -->
+    <div class="column">
+        <h2>Frutas</h2>
+
+        {% for fruta in frutas %}
+            <div class="fruit-item">
+                <strong>{{ fruta.name }}</strong>
+                <span class="fruit-cal">
+                    {{ fruta.nutritions.calories }} kcal
+                </span>
+            </div>
+        {% empty %}
+            <p class="empty">No hay frutas disponibles.</p>
+        {% endfor %}
+    </div>
+
+    <!-- DERECHA: RECETAS -->
+    <div class="column">
+        <h2>Recetas saludables</h2>
+
+        <div class="recipes-grid">
+            {% for receta in recetas %}
+                <div class="recipe-card">
+                    <img src="{{ receta.strMealThumb }}" alt="{{ receta.strMeal }}">
+                    <h3>{{ receta.strMeal }}</h3>
+                    <p>{{ receta.strCategory }}</p>
+                </div>
+            {% empty %}
+                <p class="empty">No hay recetas disponibles.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
