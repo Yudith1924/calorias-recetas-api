@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/654cb8bf-5155-4517-8a7e-4608414f3953
 # Calorías y Recetas API
 
 Plataforma web enfocada en el bienestar nutricional, diseñada para la consulta rápida de valor calórico en frutas y la exploración de recetas saludables. Desarrollada sobre **Django 5.2**, la aplicación integra servicios externos vía API REST para proporcionar datos precisos en tiempo real, ofreciendo una experiencia de usuario fluida, moderna y orientada a la vida saludable.
@@ -21,7 +19,7 @@ Plataforma web enfocada en el bienestar nutricional, diseñada para la consulta 
 
 ### Funcionamiento de la Plataforma
 <video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/TU_ID_AQUI" type="video/mp4">
+  <source src="[https://github.com/user-attachments/assets/TU_ID_AQUI](https://github.com/user-attachments/assets/654cb8bf-5155-4517-8a7e-4608414f3953)" type="video/mp4">
 </video>
 
 ### Interfaces del Sistema
