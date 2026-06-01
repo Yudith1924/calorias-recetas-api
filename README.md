@@ -18,9 +18,9 @@ Plataforma web enfocada en el bienestar nutricional, diseñada para la consulta 
 ---
 
 ## Demostración Visual
-
-*(Uploading calorias-recetas-api.mp4…)*
-
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/abb6ab2b-5d5d-4e53-94ae-528889390ab2" width="100%" controls></video>
+</div>
 
 ### Interfaces del Sistema
 
