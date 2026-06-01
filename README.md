@@ -20,7 +20,7 @@ Plataforma web enfocada en el bienestar nutricional, diseñada para la consulta 
 ### Funcionamiento de la Plataforma
 
 A continuación se muestra el flujo interactivo de la aplicación.
-*Uploading calorias-recetas-api.mp4…*
+*<video src="calorias-recetas-api.mp4" ...>*
 
 
 ### Interfaces del Sistema
@@ -33,7 +33,7 @@ A continuación se muestra el flujo interactivo de la aplicación.
 
 ---
 
-## 🛠 Stack Tecnológico
+## Stack Tecnológico
 
 * **Framework:** Django 5.2
 * **Lenguaje:** Python 3.13
@@ -43,7 +43,7 @@ A continuación se muestra el flujo interactivo de la aplicación.
 
 ---
 
-## 📦 Instalación y Configuración
+## Instalación y Configuración
 
 Siga estos pasos para clonar y ejecutar el entorno de desarrollo:
 
@@ -73,11 +73,3 @@ pip install -r requirements.txt
 python manage.py runserver
 
 ```
-
----
-
-### ¿Qué hacer ahora?
-
-1. **Sube tus archivos:** Sube tus capturas (`imagen1.png`, `imagen2.png`) y tu video (`video.mp4`) usando el botón **"Add file"** en GitHub.
-2. **Edita nombres:** Si tus archivos tienen otros nombres, asegúrate de cambiar `imagen1.png` y `video.mp4` en el texto de arriba para que coincidan con los nombres reales de tus archivos subidos.
-3. **¡Listo!** Tendrás un README digno de un profesional.
