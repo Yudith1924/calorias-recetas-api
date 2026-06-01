@@ -18,12 +18,7 @@ Plataforma web enfocada en el bienestar nutricional, diseñada para la consulta 
 ## Demostración Visual
 
 ### Funcionamiento de la Plataforma
-
-A continuación se muestra el flujo interactivo de la aplicación.
-Uploading calorias-recetas-api.mp4…
-
-
-
+<video src="https://github.com/Yudith1924/calorias-recetas-api/blob/main/calorias-recetas-api.mp4?raw=true" controls autoplay loop muted width="100%"></video>
 
 ### Interfaces del Sistema
 
